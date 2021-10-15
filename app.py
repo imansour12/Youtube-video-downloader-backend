@@ -61,3 +61,4 @@ def get_song(music_name):
         abort(404)
 
 
+app.run(host='0.0.0.0', port=8080, debug=True)
