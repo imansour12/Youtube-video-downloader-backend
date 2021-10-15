@@ -26,7 +26,7 @@ def post_music(music_name):
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download(['https://www.youtube.com/watch?v=' + music_name])
     video = VideoFileClip(os.path.join(file_name))
-    audio_file_name = "./client/music/" + music_name + ".mp3"
+    audio_file_name = ".././client/music/" + music_name + ".mp3"
     video.audio.write_audiofile(os.path.join(audio_file_name))
     pathToRedirect = "/get-music/" + music_name + ".mp3"
     #os.remove("./client/videos/" + music_name + ".mp4")
@@ -37,7 +37,7 @@ def post_video(video_name):
     print(video_name)
     if video_name == "9bZkp7q19f0":
         return "YOU DARE WATCH ASIAN PROPAGANDA FROM OUR SERVERS?\n YOU ARE FUNNY! \n PLEASE FACE WALL"
-    file_name = "./client/videos/" + video_name + ".mp4"
+    file_name = ".././client/videos/" + video_name + ".mp4"
     ydl_opts = {'outtmpl': file_name}
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download(['https://www.youtube.com/watch?v=' + video_name])
