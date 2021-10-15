@@ -60,5 +60,3 @@ def get_song(music_name):
     except FileNotFoundError:
         abort(404)
 
-
-app.run(host='0.0.0.0', port=8080, debug=True)
