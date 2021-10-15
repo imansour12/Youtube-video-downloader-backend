@@ -60,6 +60,4 @@ def get_song(music_name):
     except FileNotFoundError:
         abort(404)
 
-if __name__ == "__main__":
-    app.run(debug=False)
 
