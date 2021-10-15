@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-import youtube_dl
+import yt_dlp
 import os
 from moviepy.editor import *
 from time import sleep  # Maybe throttle the requests to youtube-dl
@@ -23,7 +23,7 @@ def post_music(music_name):
         return "YOU DARE WATCH ASIAN PROPAGANDA FROM OUR SERVERS?\n YOU ARE FUNNY! \n PLEASE FACE WALL"
     file_name = "./client/videos/" + music_name + ".mp4"
     ydl_opts = {'outtmpl': file_name}
-    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download(['https://www.youtube.com/watch?v=' + music_name])
     video = VideoFileClip(os.path.join(file_name))
     audio_file_name = "./client/music/" + music_name + ".mp3"
@@ -39,7 +39,7 @@ def post_video(video_name):
         return "YOU DARE WATCH ASIAN PROPAGANDA FROM OUR SERVERS?\n YOU ARE FUNNY! \n PLEASE FACE WALL"
     file_name = "./client/videos/" + video_name + ".mp4"
     ydl_opts = {'outtmpl': file_name}
-    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download(['https://www.youtube.com/watch?v=' + video_name])
     pathToRedirect = "/get-video/" + video_name + ".mp4"
     #os.remove("./client/videos/" + video_name + ".mp4")
