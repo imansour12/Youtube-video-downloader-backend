@@ -60,3 +60,4 @@ def get_song(music_name):
     except FileNotFoundError:
         abort(404)
 
+app.run()
